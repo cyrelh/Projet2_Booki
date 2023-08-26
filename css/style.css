@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap');
+
 /****** General ***********/
+/*WILDCARD*/
 * {
+    box-sizing: border-box; /*Quand je dis qu'une box fait 200px, elle fera 200px point barre*/
     font-family: 'Raleway', sans-serif;
 }
 
@@ -27,8 +31,33 @@ body {
 
 a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: none; /* enlève souligne */
 }
+
+nav{
+    border: 1px solid red;
+    display: flex;
+    align-items: center; /* en-haut et centré */
+    justify-content: flex-end; /*translation vers la droite au bout*/
+    flex-wrap: wrap; /*Hebergements et activités sont l'un sous l'autre en réduiant la fenêtre*/
+}
+
+nav a {
+    padding: 2rem; /* on rajoute de la marge interne pour hébergement et activités*/
+}
+
+#logo{
+    margin-right: auto; /*pour séparer le logo des deux blocs, auto en css = prend toute la place possible*/
+    padding: 0 2rem;
+
+}
+
+
+nav a:hover{
+    border-top: 3px solid #0065FC; /*création d'une bordure bleue au passage de la souris*/
+    color: #0065FC;
+}
+
 
 .section-title {
     margin: 0;
