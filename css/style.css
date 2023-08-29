@@ -93,6 +93,7 @@ nav a:hover{
 
 .search *{ /*tous les éléments à l'intérieur*/
 padding: 1rem 1.5rem;
+font-size: 1.1rem;
 }
 
 .search i{
@@ -107,7 +108,6 @@ padding: 1rem 1.5rem;
 }
 .search input::placeholder{
     font-weight: bold;
-    font-size: 1.1rem;
     text-align: center; /* Revoir  plus tard <<<<<<<<<<<< */
     color: #000;
 }
@@ -115,11 +115,19 @@ padding: 1rem 1.5rem;
 .search button{
     background-color: #0065FC;
     border-radius: 0 1rem 1rem 0;
+    border-color: #0065FC; /*JUDICIEUX ?*/
     padding: 1rem 1.5rem; /*Ajout du padding sur les côtés*/
     color: #F2F2F2;
-    font-size: 1rem;
     font-weight: bold;
     cursor:pointer; /*UTILE ?*/
+    opacity: 0.9; /*UTILE l'effet ?*/
+    transition: transform 400ms;
+}
+
+.search button:hover{
+    opacity: 1;
+    transform: scale(1.03);
+
 }
 
 
