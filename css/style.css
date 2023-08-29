@@ -11,6 +11,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+ 
 }
 
 .fa-solid {
@@ -34,6 +35,7 @@ a {
     text-decoration: none; /* enlève souligne */
 }
 
+/* NAVBAR */
 nav{
    /* border: 1px solid red;draft*/
     display: flex;
@@ -55,7 +57,7 @@ nav a:hover{
 #logo{
     margin-right: auto; /*pour séparer le logo des deux blocs, auto en css = prend toute la place possible*/
     padding: 0 2rem;
-
+    block-size: 1.7rem;
 }
 
 .subnav{
@@ -72,6 +74,54 @@ nav a:hover{
     color: #0065FC; /*texte devient bleu au passage de la souris*/
 
 }
+
+/* body */
+.accroche{
+    padding: 0 2rem;
+}
+
+.accroche h1, 
+.accroche p {
+    margin-bottom: 1rem;
+}
+
+/* Formulaire de Recherche */
+.search{
+    display: flex;
+    align-items: center; /* Pour m'assurer que icone placeholder et bouton sont bien alignés sur le même axe H */
+}
+
+.search *{ /*tous les éléments à l'intérieur*/
+padding: 1rem 1.5rem;
+}
+
+.search i{
+    background-color: lightgrey;
+    border-radius: 1rem 0 0 1rem;
+
+}
+.search input{
+   /* padding-right: 2rem;*/ /* Revoir  plus tard <<<<<<<<<<<< */
+   flex-basis: 12rem;
+   border: 1px solid lightgrey;
+}
+.search input::placeholder{
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center; /* Revoir  plus tard <<<<<<<<<<<< */
+    color: #000;
+}
+
+.search button{
+    background-color: #0065FC;
+    border-radius: 0 1rem 1rem 0;
+    padding: 1rem 1.5rem; /*Ajout du padding sur les côtés*/
+    color: #F2F2F2;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor:pointer; /*UTILE ?*/
+}
+
 
 @media(max-width:768px) { /*mediaquery = selon la largeur de l'écran on charge une différente règle css*/
     .subnav{
@@ -91,7 +141,6 @@ nav a:hover{
         border-top-color: transparent; /*border-top:none IMPOSSIBLE CA FAIT BOUGER le texte*/
     }
 }
-
 
 .section-title {
     margin: 0;
