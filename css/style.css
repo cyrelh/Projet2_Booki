@@ -91,31 +91,35 @@ nav a:hover{
     align-items: center; /* Pour m'assurer que icone placeholder et bouton sont bien alignés sur le même axe H */
 }
 
-.search *{ /*tous les éléments à l'intérieur*/
-padding: 1rem 1.5rem;
+.search > *{ /*tous les éléments à l'intérieur*/
+padding: 1rem 1rem;
 font-size: 1.1rem;
 }
 
 .search i{
-    background-color: lightgrey;
+    background-color: #F2F2F2;
     border-radius: 1rem 0 0 1rem;
+    border: 0.2rem solid #F2F2F2; /*Maitrise hauteur bordure*/
+
+
 
 }
 .search input{
    /* padding-right: 2rem;*/ /* Revoir  plus tard <<<<<<<<<<<< */
    flex-basis: 12rem;
-   border: 1px solid lightgrey;
+   border: 0.1rem solid #F2F2F2;
 }
 .search input::placeholder{
     font-weight: bold;
     text-align: center; /* Revoir  plus tard <<<<<<<<<<<< */
     color: #000;
+    
 }
 
 .search button{
     background-color: #0065FC;
     border-radius: 0 1rem 1rem 0;
-    border-color: #0065FC; /*JUDICIEUX ?*/
+    border: 0.1rem solid #0065FC;
     padding: 1rem 1.5rem; /*Ajout du padding sur les côtés*/
     color: #F2F2F2;
     font-weight: bold;
@@ -130,25 +134,56 @@ font-size: 1.1rem;
 
 }
 
-
-@media(max-width:768px) { /*mediaquery = selon la largeur de l'écran on charge une différente règle css*/
-    .subnav{
-        /*border: 2px solid blue; draft*/
-        order: 1; /*ma subnav s'est mise toute à la fin*/
-        flex-basis: 100%; /*équivaut à width 100%*/
-    }
-
-    .subnav a{
-       flex-basis: 50%; /*équivaut mais gagne par rapport à width: 50%; Partage moitié/moitié hébergements activités*/
-       text-align: center; /*centrer le texte*/
-       border-bottom: 3px solid #fff;
-    }
-
-    .subnav a:hover{
-        border-bottom-color:#0065FC;
-        border-top-color: transparent; /*border-top:none IMPOSSIBLE CA FAIT BOUGER le texte*/
-    }
+/* FILTRES */
+.filter{
+    padding: 1rem;
+    display: flex; /* Pour aligner Filtres avec les 4 autres blocs */
+    align-items: center; /*Pour centrer sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
+    gap: 1rem 2rem; /*mettre un espace entre chacun des 4 blocs*/
+    flex-wrap: wrap;
 }
+
+.subfilter{
+    padding: 1rem;
+    border: 2px solid #F2F2F2;
+    border-radius: 2rem;
+    align-items: center;
+    
+}
+
+.subfilter .fa-solid{
+    border-radius: 50%;
+}
+
+.subfilter span{
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.subfilter:hover {
+    background-color:#DEEBFF;
+}
+
+.info {
+    display: flex;
+    justify-items: 3rem;   
+    align-items: center;
+    gap: 1rem; /*GAP SUR PARENT ET NON SUR LE FILS*/
+    padding: 1rem;
+
+}
+
+.info .fa-solid {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #F2F2F2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 
 .section-title {
     margin: 0;
@@ -281,7 +316,22 @@ font-size: 1.1rem;
     }
 }
 
-/* Small devices (phones, less than 768px) */
+/* Small devices (phones, less than 768px) */ /*mediaquery = selon la largeur de l'écran on charge une différente règle css*/
 @media (max-width: 767.98px) {
-    /* ... */
+    .subnav{
+        /*border: 2px solid blue; draft*/
+        order: 1; /*ma subnav s'est mise toute à la fin*/
+        flex-basis: 100%; /*équivaut à width 100%*/
+    }
+
+    .subnav a{
+       flex-basis: 50%; /*équivaut mais gagne par rapport à width: 50%; Partage moitié/moitié hébergements activités*/
+       text-align: center; /*centrer le texte*/
+       border-bottom: 3px solid #F2F2F2;
+    }
+
+    .subnav a:hover{
+        border-bottom-color:#0065FC;
+        border-top-color: transparent; /*border-top:none IMPOSSIBLE CA FAIT BOUGER le texte*/
+    }
 }
