@@ -21,6 +21,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0; /* CORRECTION effectuée */
 }
 
 .main-container {
@@ -45,14 +46,18 @@ nav{
 }
 
 nav a {
-    padding: 2rem; /* on rajoute de la marge interne pour hébergement et activités*/
+    margin:0 1rem 1rem 3rem; /* CORRECTION on rajoute de la marge interne pour hébergement et activités*/
+    padding-top: 1rem; /*CORRECTION LARGEUR DE LA BARRE BLEUE AVEC TEXTE*/
     border-top: 3px solid transparent; /*ça évite de faire bouger mon logo*/
 
 }
 
-nav a:hover{
-    border-top-color: #0065FC; /*création d'une bordure bleue au passage de la souris*/
+
+nav a.active { /* CORRECTION effectuée */
+    color: #0065FC; /* Texte en bleu */
+    border-top-color: #0065FC; /* Bordure supérieure en bleu */
 }
+
 
 #logo{
     margin-right: auto; /*pour séparer le logo des deux blocs, auto en css = prend toute la place possible*/
@@ -66,23 +71,19 @@ nav a:hover{
 
 }
 
-/*.subnav a{
-    /*border: 1px solid purple;draft
-}*/
-
-.subnav a:hover{
-    color: #0065FC; /*texte devient bleu au passage de la souris*/
-
-}
 
 /* body */
 .accroche{
-    padding: 0 2rem;
+    padding: 2rem;
 }
 
-.accroche h1, 
+.accroche h1{
+    margin: 0;
+
+}
+
 .accroche p {
-    margin-bottom: 1rem;
+    margin:0 0 2rem 0;
 }
 
 /* Formulaire de Recherche */
@@ -106,7 +107,7 @@ font-size: 1.1rem;
 }
 .search input{
    /* padding-right: 2rem;*/ /* Revoir  plus tard <<<<<<<<<<<< */
-   flex-basis: 12rem;
+   flex-basis: 12rem; /*Quelle largeur du input Marseille France ??? 15rem ?*/
    border: 0.1rem solid #F2F2F2;
 }
 .search input::placeholder{
@@ -120,7 +121,7 @@ font-size: 1.1rem;
     background-color: #0065FC;
     border-radius: 0 1rem 1rem 0;
     border: 0.1rem solid #0065FC;
-    padding: 1rem 1.5rem; /*Ajout du padding sur les côtés*/
+    padding: 1rem; /*Correction ESPACE SUR LES COTES BOUTTON RECHERCHER*/
     color: #F2F2F2;
     font-weight: bold;
     cursor:pointer; /*UTILE ?*/
@@ -136,10 +137,10 @@ font-size: 1.1rem;
 
 /* FILTRES */
 .filter{
-    padding: 1rem;
+    padding: 2rem 0 0 0;
     display: flex; /* Pour aligner Filtres avec les 4 autres blocs */
     align-items: center; /*Pour centrer sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
-    gap: 1rem 2rem; /*mettre un espace entre chacun des 4 blocs*/
+    gap: 1rem; /*CORRECTION mettre un espace entre chacun des 4 blocs*/
     flex-wrap: wrap;
 }
 
@@ -169,7 +170,7 @@ font-size: 1.1rem;
     justify-items: 3rem;   
     align-items: center;
     gap: 1rem; /*GAP SUR PARENT ET NON SUR LE FILS*/
-    padding: 1rem;
+    padding: 1rem 0 1rem 0;
 
 }
 
@@ -184,8 +185,19 @@ font-size: 1.1rem;
 
 }
 
+.info p{
+    margin:1rem 0 1rem 0;
+}
+
+
+/* LISTE APPARTEMENTS */
 
 .section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.section-title2 {
     margin: 0;
     font-size: 22px;
 }
@@ -197,11 +209,26 @@ font-size: 1.1rem;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.hotel{
+       background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); 
+}
+
 .card img {
     object-fit: cover;
 }
 
+.hotel img {
+    object-fit: cover;
+}
+
 .card-title {
+    font-size: 16px;
+}
+
+.hotel-title {
     font-size: 16px;
 }
 
@@ -229,6 +256,46 @@ font-size: 1.1rem;
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hebergements-list .hotel{
+    display: flex;
+    margin-top: 33px;
+}
+
+.hebergements-list img{
+   width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.hebergements-list .hotel-content{
+        width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-list .hotel-title{
+        margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergements-list .hotel-subtitle{
+    margin: 0;
+}
+
+.hebergements-list .hotel-rating{
+   margin-bottom: 5px;
 }
 
 /****** Populaires ***********/

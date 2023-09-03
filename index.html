@@ -15,15 +15,27 @@
 <body>
     <div class="main-container">
 <!-- HEADER -->
-        <header>
-            <nav>
-                <img id="logo" src="./images/logo/Booki.png" alt="Logo de Booki">
-                <div class="subnav">
-                    <a href="">Hébergements</a>
-                    <a href="">Activités</a>
-                </div>
-            </nav>
-        </header>
+<header>
+    <nav>
+        <img id="logo" src="./images/logo/Booki.png" alt="Logo de Booki">
+        <div class="subnav">
+            <a href="#section-hebergements" class="active">Hébergements</a>
+            <a href="#section-activites">Activités</a>
+            
+        </div>
+    </nav>
+</header>
+
+<!-- Vos sections correspondantes -->
+<section id="section-hebergements">
+    <!-- Le contenu de la section "Hébergements" va ici -->
+</section>
+
+<section id="section-activites">
+    <!-- Le contenu de la section "Activités" va ici -->
+</section>
+
+
 <!-- Phrase d'accroche -->
         <main class="accroche">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -38,7 +50,7 @@
 
 <!-- FILTRES DE RECHERCHE -->
 <div class="filter">
-    <h2>Filtres</h2>
+    <h3>Filtres</h3>
         <div class="subfilter">
             <i class="fa-solid fa-money-bill-wave"></i>
             <span>Economique</span>
@@ -63,11 +75,44 @@
     <p>Plus de 500 logements sont disponibles dans cette ville</p>
 </div>
 
-
+<!-- LISTE APPARTEMENTS -->
             <div class="hebergements-and-populaires">
-                <section class="hebergements">
+                <section id="section-hebergements" class="hebergements">
+                    <div class="hebergements-title">
+                    <h2 class="section-title2">Hébergements à Marseille</h2>
+                    </div>
+                   <div class="hebergements-list">
+                    <a href="#">
+                        <article class="hotel">
+                            <img src="./images/hebergements/fred-kleber.jpg" alt="Image de la chambre de l'hôtel du port">
+                            <div class="hotel-content">
+                                <div class="hotel-txt">
+                                <h3 class="hotel-title">Hôtel du port</h3>
+                                <p class="hotel-subtitle">Nuit à partir de 52 <span class="euro">€</span></p>
+                                </div>
+                                <div class="hotel-rating">
+                                    <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+                                        <span class="sr-only">Note de 4 sur 5</span>
 
+                                </div>
+                            </div>
+
+
+                            
+                        </article>                        
+
+                    </a>
+
+
+                   </div>
+                   
                 </section>
+
+
                 <section class="populaires">
                     <div class="populaires-title">
                         <h2 class="section-title">Les plus populaires</h2>
@@ -134,6 +179,7 @@
                     </div>
                 </section>
             </div>
+            
         </main>
         <footer></footer>
     </div>
