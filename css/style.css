@@ -66,7 +66,6 @@ nav a.active { /* CORRECTION effectuée */
 }
 
 .subnav{
-   /* border: 1px solid greenyellow;draft*/
     display: flex; /* Hebergement et activités se sont des liens (n'ont pas de hauteur) et à donc sont en display inline, donc on passe à un display flex*/
 
 }
@@ -74,16 +73,16 @@ nav a.active { /* CORRECTION effectuée */
 
 /* body */
 .accroche{
-    padding: 2rem;
+    padding: 2rem; /*Correction effectuée*/
 }
 
 .accroche h1{
-    margin: 0;
+    margin: 0; 
 
 }
 
 .accroche p {
-    margin:0 0 2rem 0;
+    margin:0 0 2rem 0; /*Correction effectuée*/
 }
 
 /* Formulaire de Recherche */
@@ -106,8 +105,7 @@ font-size: 1.1rem;
 
 }
 .search input{
-   /* padding-right: 2rem;*/ /* Revoir  plus tard <<<<<<<<<<<< */
-   flex-basis: 12rem; /*Quelle largeur du input Marseille France ??? 15rem ?*/
+   flex-basis: 12rem; /*largeur du input Marseille France */
    border: 0.1rem solid #F2F2F2;
 }
 .search input::placeholder{
@@ -124,12 +122,12 @@ font-size: 1.1rem;
     padding: 1rem; /*Correction ESPACE SUR LES COTES BOUTTON RECHERCHER*/
     color: #F2F2F2;
     font-weight: bold;
-    cursor:pointer; /*UTILE ?*/
-    opacity: 0.9; /*UTILE l'effet ?*/
-    transition: transform 400ms;
+    cursor:pointer; /*negligeable*/
+    opacity: 0.9; /*negligeable*/
+    transition: transform 400ms; /*negligeable*/
 }
 
-.search button:hover{
+.search button:hover{ /*negligeable*/
     opacity: 1;
     transform: scale(1.03);
 
@@ -137,7 +135,7 @@ font-size: 1.1rem;
 
 /* FILTRES */
 .filter{
-    padding: 2rem 0 0 0;
+    padding: 2rem 0 0 0; /*Correction effectuée*/
     display: flex; /* Pour aligner Filtres avec les 4 autres blocs */
     align-items: center; /*Pour centrer sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
     gap: 1rem; /*CORRECTION mettre un espace entre chacun des 4 blocs*/
@@ -186,63 +184,15 @@ font-size: 1.1rem;
 }
 
 .info p{
-    margin:1rem 0 1rem 0;
+    margin:1rem 0 1rem 0; /*Correction effectuée*/
 }
 
-
-/* LISTE APPARTEMENTS */
-
-.section-title {
-    margin: 0;
-    font-size: 22px;
-}
-
-.section-title2 {
-    margin: 0;
-    font-size: 22px;
-}
-
-.card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-.hotel{
-       background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); 
-}
-
-.card img {
-    object-fit: cover;
-}
-
-.hotel img {
-    object-fit: cover;
-}
-
-.card-title {
-    font-size: 16px;
-}
-
-.hotel-title {
-    font-size: 16px;
-}
-
-.euro {
-    font-weight: 700;
-}
-
-.neutral-star {
-    color: var(--main-bg-color)
-}
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -253,9 +203,36 @@ font-size: 1.1rem;
     box-sizing: border-box;
 }
 
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+    width: 64%;
+    margin-bottom: 0;
 }
 
 .hebergements-title {
@@ -264,49 +241,78 @@ font-size: 1.1rem;
     align-items: center;
 }
 
-.hebergements-list .hotel{
-    display: flex;
-    margin-top: 33px;
+.section-title2 {
+    margin: 0;
+    font-size: 22px;
 }
 
-.hebergements-list img{
-   width: 33%;
+.hebergements-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes égales */
+    grid-gap: 20px; /* Ajout d'un espacement entre les éléments */
+    margin-top: 33px; /* Gardez la marge supérieure */
+}
+
+.hebergements-list .card{ /*PAS DE FLEX*/
+    width: 100%; /* Chaque élément occupera 100% de la largeur de sa cellule */
+    margin-bottom: 0; /* Augmentez ou diminuez cette valeur selon votre préférence */
+
+}
+
+.hebergements-list img{ 
+    width: 100%;
     height: 136px;
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
 }
 
-.hebergements-list .hotel-content{
-        width: 67%;
-    padding-left: 15px;
+.hebergements-list .card-content{ /*le conteneur de chaque card*/
+    width: 100%;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
+    
 }
 
-.hebergements-list .hotel-title{
-        margin-top: 10px;
+.hebergements-list .card-title{
+    margin-top: 10px;
     margin-bottom: 4px;
 }
 
-.hebergements-list .hotel-subtitle{
+.hebergements-list .card-subtitle{
     margin: 0;
 }
 
-.hebergements-list .hotel-rating{
+.hebergements-list .card-rating{
    margin-bottom: 5px;
 }
+
+/* Ajouter une marge au-dessus du message "Afficher plus" */
+.hebergements-list h3 {
+    margin-top: 20px; /* Vous pouvez ajuster cette valeur selon vos préférences */
+    margin-bottom: 0;
+}
+
 
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    margin-bottom: 0;
 }
 
 .populaires-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
 }
 
 .populaires-cards .card {
@@ -342,7 +348,6 @@ font-size: 1.1rem;
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
-
 
 
 
@@ -385,8 +390,14 @@ font-size: 1.1rem;
 
 /* Small devices (phones, less than 768px) */ /*mediaquery = selon la largeur de l'écran on charge une différente règle css*/
 @media (max-width: 767.98px) {
+
+    nav a.active { 
+        color: #0065FC; /* Texte en bleu */
+        border-top-color: transparent; /* Bordure supérieure en bleu */
+        border-bottom-color: #0065FC;
+    }   
+
     .subnav{
-        /*border: 2px solid blue; draft*/
         order: 1; /*ma subnav s'est mise toute à la fin*/
         flex-basis: 100%; /*équivaut à width 100%*/
     }
@@ -395,10 +406,11 @@ font-size: 1.1rem;
        flex-basis: 50%; /*équivaut mais gagne par rapport à width: 50%; Partage moitié/moitié hébergements activités*/
        text-align: center; /*centrer le texte*/
        border-bottom: 3px solid #F2F2F2;
-    }
 
-    .subnav a:hover{
-        border-bottom-color:#0065FC;
-        border-top-color: transparent; /*border-top:none IMPOSSIBLE CA FAIT BOUGER le texte*/
+    }
+    
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+        row-gap: 1rem;
     }
 }
