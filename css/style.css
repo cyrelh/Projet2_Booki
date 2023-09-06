@@ -218,6 +218,12 @@ font-size: 1.1rem;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.card-activities{
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));  
+}
+
 .card img {
     object-fit: cover;
 }
@@ -350,6 +356,74 @@ font-size: 1.1rem;
 }
 
 
+/****** Activités ***********/
+.activities {
+    width: 100%;
+    margin-top: 33px;
+    margin-bottom: 0;
+}
+
+.activities-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title3 {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding-left: 30px;
+    font-size: 22px;
+}
+
+.activities-cards{
+    padding-left: 30px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Création de 4 colonnes égales */
+    grid-gap: 1px; /* Ajout d'un espacement entre les éléments */
+}
+
+.activities-cards .card-activities {
+    margin-top: 33px;
+    width: calc(100% - 20px); /* 100% - espacement (20px) entre les blocs */}
+
+.activities-cards img {
+    width: 100%;
+    height: 350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activities-cards .card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-center;
+    box-sizing: border-box;
+}
+
+.activities-cards .card-title {
+    margin:20px;
+}
+
+footer {
+    background-color: #F2F2F2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+
+}
+
+footer>*{
+    flex-basis: 30%;;
+}
+
+.footer-content{
+    font-size: smaller;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
