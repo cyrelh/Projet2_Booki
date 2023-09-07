@@ -45,7 +45,7 @@ nav{
     flex-wrap: wrap; /*Hebergements et activités sont l'un sous l'autre en réduiant la fenêtre*/
 }
 
-nav a {
+.subnav a {
     margin:0 1rem 1rem 3rem; /* CORRECTION on rajoute de la marge interne pour hébergement et activités*/
     padding-top: 1rem; /*CORRECTION LARGEUR DE LA BARRE BLEUE AVEC TEXTE*/
     border-top: 3px solid transparent; /*ça évite de faire bouger mon logo*/
@@ -53,7 +53,7 @@ nav a {
 }
 
 
-nav a.active { /* CORRECTION effectuée */
+nav a:hover { /* CORRECTION effectuée */
     color: #0065FC; /* Texte en bleu */
     border-top-color: #0065FC; /* Bordure supérieure en bleu */
 }
@@ -82,40 +82,42 @@ nav a.active { /* CORRECTION effectuée */
 }
 
 .accroche p {
-    margin:0 0 2rem 0; /*Correction effectuée*/
+    margin: 0.5rem 0 2rem 0; /*Correction effectuée*/
 }
 
 /* Formulaire de Recherche */
-.search{
+
+.search-glass {
+display: none;
+}
+
+.search-form{
     display: flex;
     align-items: center; /* Pour m'assurer que icone placeholder et bouton sont bien alignés sur le même axe H */
 }
 
-.search > *{ /*tous les éléments à l'intérieur*/
+.search-form > *{ /*tous les éléments à l'intérieur*/
 padding: 1rem 1rem;
 font-size: 1.1rem;
 }
 
-.search i{
+.search-form i{
     background-color: #F2F2F2;
     border-radius: 1rem 0 0 1rem;
-    border: 0.2rem solid #F2F2F2; /*Maitrise hauteur bordure*/
-
-
-
+    border: 0.2rem solid transparent; /*TRANSPARENT SINON GROSSE SURPRISE COTE MOBILE Maitrise hauteur bordure*/
 }
-.search input{
+.search-form input{
    flex-basis: 12rem; /*largeur du input Marseille France */
    border: 0.1rem solid #F2F2F2;
 }
-.search input::placeholder{
+.search-form input::placeholder{
     font-weight: bold;
     text-align: center; /* Revoir  plus tard <<<<<<<<<<<< */
     color: #000;
     
 }
 
-.search button{
+.search-form button{
     background-color: #0065FC;
     border-radius: 0 1rem 1rem 0;
     border: 0.1rem solid #0065FC;
@@ -127,7 +129,7 @@ font-size: 1.1rem;
     transition: transform 400ms; /*negligeable*/
 }
 
-.search button:hover{ /*negligeable*/
+.search-form button:hover{ /*negligeable*/
     opacity: 1;
     transform: scale(1.03);
 
@@ -137,7 +139,7 @@ font-size: 1.1rem;
 .filter{
     padding: 2rem 0 0 0; /*Correction effectuée*/
     display: flex; /* Pour aligner Filtres avec les 4 autres blocs */
-    align-items: center; /*Pour centrer sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
+    align-items: baseline; /*Pour centrer le texte sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
     gap: 1rem; /*CORRECTION mettre un espace entre chacun des 4 blocs*/
     flex-wrap: wrap;
 }
@@ -146,8 +148,7 @@ font-size: 1.1rem;
     padding: 1rem;
     border: 2px solid #F2F2F2;
     border-radius: 2rem;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 .subfilter .fa-solid{
@@ -299,7 +300,7 @@ font-size: 1.1rem;
 
 /* Ajouter une marge au-dessus du message "Afficher plus" */
 .hebergements-list h3 {
-    margin-top: 20px; /* Vous pouvez ajuster cette valeur selon vos préférences */
+    margin-top: 8px; /* Vous pouvez ajuster cette valeur selon vos préférences */
     margin-bottom: 0;
 }
 
@@ -464,27 +465,186 @@ footer>*{
 
 /* Small devices (phones, less than 768px) */ /*mediaquery = selon la largeur de l'écran on charge une différente règle css*/
 @media (max-width: 767.98px) {
+  
+    .main-container {
+        width: 100%;
+        max-width: 1440px;
+        padding: 0; /*CHECK COMPUTED BROWSER*/
+        box-sizing: border-box;
+    }
 
+
+    #logo{
+        margin-left: auto;
+        block-size: 1.3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+    }
+    
+    
     nav a.active { 
         color: #0065FC; /* Texte en bleu */
         border-top-color: transparent; /* Bordure supérieure en bleu */
         border-bottom-color: #0065FC;
-    }   
+        padding-bottom: 1rem;
+        flex-basis: 50%;
+    }
 
+    
+    nav a {
+        margin:0; /* CORRECTION on ENLEVE LA MARGIN POUR AVOIR LIGNE CONTINUE pour hébergement et activités*/
+        padding-top: 1rem; /*CORRECTION LARGEUR DE LA BARRE BLEUE AVEC TEXTE*/
+        border-top: 3px solid transparent; /*ça évite de faire bouger mon logo*/
+    }
+    
     .subnav{
-        order: 1; /*ma subnav s'est mise toute à la fin*/
         flex-basis: 100%; /*équivaut à width 100%*/
     }
 
     .subnav a{
        flex-basis: 50%; /*équivaut mais gagne par rapport à width: 50%; Partage moitié/moitié hébergements activités*/
+       justify-content: center;
        text-align: center; /*centrer le texte*/
        border-bottom: 3px solid #F2F2F2;
+    }
+
+    .search-form .search-text{
+        display: none;    }
+
+    .search-glass{
+        display:inline;
+        background-color: #0065FC;
+        border-radius: 25%;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5); /* Ombre en bas */
+    
+    }
+
+    .search-glass i{
+        background-color: #0065FC;
+    }
+
+
+    .fa-magnifying-glass{
+        color: #F2F2F2;
+        border-color: #0065FC;
+    }
+
+    .filter {
 
     }
     
-    .hebergements-and-populaires {
-        flex-direction: column-reverse;
-        row-gap: 1rem;
+    .subfilter-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+      
     }
-}
+
+    /******* Populaires ***********/
+    .populaires {
+        order: -1; /*AVANT HEBERGEMENTS*/
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex-basis: 100%;
+        
+    }
+    
+    .populaires-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .section-title {
+        margin: 0;
+        font-size: 22px;
+    }
+
+     .populaires-cards{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr); /* Création de 3 lignes égales */
+        grid-gap: 10px; /* Ajout d'un espacement entre les éléments */
+        margin-top: 3px; /* Gardez la marge supérieure */
+    }
+    
+    .populaires-cards .card {
+        display: flex;
+        margin-top: 33px;
+    }
+    
+    .populaires-cards img {
+        width: 33%;
+        height: 136px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    
+    .populaires-cards .card-content {
+        width: 67%;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    
+    .populaires-cards .card-title {
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+    
+    .populaires-cards .card-subtitle {
+        margin: 0;
+    }
+    
+    .populaires-cards .card-rating {
+        margin-bottom: 5px;
+    }
+
+
+
+
+  
+    .hebergements-list,
+    .populaires-cards,
+    .activities-cards {
+      grid-template-columns: 1fr;
+      grid-gap: 20px; 
+    }
+  
+    .hebergements-list .card,
+    .populaires-cards .card,
+    .activities-cards .card-activities {
+      width: 100%;
+    }
+
+
+
+
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        width: 100%;
+    }
+    footer > *{
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-content{
+        font-size: smaller;
+    }
+
+  }
+  
