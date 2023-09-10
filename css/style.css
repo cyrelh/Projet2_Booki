@@ -296,7 +296,7 @@ font-size: 1.1rem;
 }
 
 .hebergements-list .card-subtitle{
-    font-size: smaller;
+    font-size: small;
     margin-bottom: 0.3rem;
 }
 
@@ -567,6 +567,7 @@ font-size: 1.1rem;
         border-top-right-radius: 20px;
     }
 
+
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -578,8 +579,20 @@ font-size: 1.1rem;
         justify-content: space-between;
     }
 
+    .populaires-cards .card {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .populaires-cards img {
+        width: 33%;
+        height: 115px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
     .populaires-cards a {
-        width: 30%;
+        width: 32%;
     }
 
     .populaires-cards .card-title {
