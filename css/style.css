@@ -409,21 +409,47 @@ font-size: 1.1rem;
     margin:20px;
 }
 
-footer {
-    background-color: #F2F2F2;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 1rem;
-
+/* Footer */
+.footer {
+  background: #F2F2F2;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-footer>*{
-    flex-basis: 30%;;
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+  max-width: 1440px; /*SIZE du DESKTOP*/
 }
 
-.footer-content{
-    font-size: smaller;
+.footer-content {
+  padding-left: 2rem; /*ajout d'un espace du bord gauche*/
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content > *{
+    margin-bottom: 0.8rem; /*marge entre les link*/
+}
+
+.footer-title {
+    margin-bottom: 1rem; /*marge entre h3 et le link en dessous*/
+}
+
+.footer-link{
+    font-size: smaller; /*police des link plus petite que h3*/
+}
+
+.footer-link:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+
+.footer-content-assistance { /*pour décaler vers la gauche seulement Assistance*/
+    margin-right: 20%;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
