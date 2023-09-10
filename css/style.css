@@ -45,6 +45,10 @@ nav{
     flex-wrap: wrap; /*Hebergements et activités sont l'un sous l'autre en réduiant la fenêtre*/
 }
 
+.subnav{
+    display: flex; /* Hebergement et activités se sont des liens (n'ont pas de hauteur) et à donc sont en display inline, donc on passe à un display flex*/
+}
+
 .subnav a {
     margin:0 1rem 1rem 3rem; /* CORRECTION on rajoute de la marge interne pour hébergement et activités*/
     padding-top: 1rem; /*CORRECTION LARGEUR DE LA BARRE BLEUE AVEC TEXTE*/
@@ -65,24 +69,21 @@ nav a:hover { /* CORRECTION effectuée */
     block-size: 1.7rem;
 }
 
-.subnav{
-    display: flex; /* Hebergement et activités se sont des liens (n'ont pas de hauteur) et à donc sont en display inline, donc on passe à un display flex*/
-
-}
-
-
 /* body */
 .accroche{
     padding: 2rem; /*Correction effectuée*/
 }
 
 .accroche h1{
-    margin: 0; 
+    margin: 0;
+    font-size: 1.4rem;
 
 }
 
 .accroche p {
     margin: 0.5rem 0 2rem 0; /*Correction effectuée*/
+    font-size: 1.1rem;
+
 }
 
 /* Formulaire de Recherche */
@@ -462,12 +463,101 @@ font-size: 1.1rem;
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .main-container {
+        width: 100%;
+        padding: 0; /*CHECK COMPUTED BROWSER*/
+        box-sizing: border-box;
+    }
+    .subnav a {
+        margin: 0 2rem 1rem 2rem; /* CORRECTION on rajoute de la marge interne pour hébergement et activités*/
+        padding-top: 1rem; /*CORRECTION LARGEUR DE LA BARRE BLEUE AVEC TEXTE*/
+        border-top: 3px solid transparent; /*ça évite de faire bouger mon logo*/
+    }
+
+    /* FILTRES */
+    .filter{
+        padding: 1rem 0 0 0; 
+        display: flex; /* Pour aligner Filtres avec les 4 autres blocs */
+        align-items: baseline; /*Pour centrer le texte sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
+        gap: 1rem; /*CORRECTION mettre un espace entre chacun des 4 blocs*/
+        flex-wrap: wrap;
+    }
+
+    .filter h3{
+        margin-bottom: 0;
+    }
+
+    #logo{
+        margin-right: auto; /*pour séparer le logo des deux blocs, auto en css = prend toute la place possible*/
+        margin-top: 1rem;
+        padding-left: 2rem;
+        block-size: 1.3rem;
+    }
+
+/* Formulaire de Recherche */
+
+.search-glass {
+    display: none;
+    }
+    
+    .search-form{
+        display: flex;
+        align-items: center; /* Pour m'assurer que icone placeholder et bouton sont bien alignés sur le même axe H */
+    }
+    
+    .search-form > *{ /*tous les éléments à l'intérieur*/
+    padding: 1rem 1rem;
+    font-size: 1.1rem;
+    }
+    
+    .search-form i{
+        background-color: #F2F2F2;
+        border-radius: 1rem 0 0 1rem;
+        border: 0.2rem solid transparent; /*TRANSPARENT SINON GROSSE SURPRISE COTE MOBILE Maitrise hauteur bordure*/
+    }
+    .search-form input{
+       flex-basis: 12rem; /*largeur du input Marseille France */
+       border: 0.1rem solid #F2F2F2;
+    }
+    .search-form input::placeholder{
+        font-weight: bold;
+        text-align: center; /* Revoir  plus tard <<<<<<<<<<<< */
+        color: #000;
+        
+    }
+    
+    .search-form button{
+        background-color: #0065FC;
+        border-radius: 0 1rem 1rem 0;
+        border: 0.1rem solid #0065FC;
+        padding: 1rem; /*Correction ESPACE SUR LES COTES BOUTTON RECHERCHER*/
+        color: #F2F2F2;
+        font-weight: bold;
+        cursor:pointer; /*negligeable*/
+        opacity: 0.9; /*negligeable*/
+        transition: transform 400ms; /*negligeable*/
+    }
+    
+    .search-form button:hover{ /*negligeable*/
+        opacity: 1;
+        transform: scale(1.03);
+    
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
     .hebergements {
         width: 100%;
+    }
+
+    .hebergements-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes égales */
+        grid-gap: 20px; /* Ajout d'un espacement entre les éléments */
+        margin-top: 33px; /* Gardez la marge supérieure */
     }
 
     .populaires {
@@ -499,8 +589,8 @@ font-size: 1.1rem;
   
     .main-container {
         width: 100%;
-        max-width: 1440px;
-        padding: 0; /*CHECK COMPUTED BROWSER*/
+        max-width: 1024px;
+        padding: 0 60px;
         box-sizing: border-box;
     }
 
@@ -566,10 +656,6 @@ font-size: 1.1rem;
     .fa-magnifying-glass{
         color: #F2F2F2;
         border-color: #0065FC;
-    }
-
-    .filter {
-
     }
     
     .subfilter-list {
