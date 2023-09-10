@@ -144,6 +144,11 @@ font-size: 1.1rem;
     flex-wrap: wrap;
 }
 
+.subfilter-list{
+    display: flex; 
+
+}
+
 .subfilter{
     padding: 1rem;
     border: 2px solid #F2F2F2;
