@@ -277,7 +277,6 @@ font-size: 1.1rem;
     height: 136px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    
 }
 
 .hebergements-list .card-content{ /*le conteneur de chaque card*/
@@ -297,7 +296,8 @@ font-size: 1.1rem;
 }
 
 .hebergements-list .card-subtitle{
-    margin: 0;
+    font-size: smaller;
+    margin-bottom: 0.3rem;
 }
 
 .hebergements-list .card-rating{
@@ -556,8 +556,15 @@ font-size: 1.1rem;
     .hebergements-list{
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes égales */
-        grid-gap: 20px; /* Ajout d'un espacement entre les éléments */
-        margin-top: 33px; /* Gardez la marge supérieure */
+        grid-gap: 24px; /* Ajout d'un espacement entre les éléments */
+        margin-top: 27px; /* Gardez la marge supérieure */
+    }
+
+    .hebergements-list img{ 
+        width: 100%;
+        height: 83px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
     .populaires {
