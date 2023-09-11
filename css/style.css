@@ -585,8 +585,8 @@ font-size: 1.1rem;
     }
 
     .populaires-cards img {
-        width: 33%;
-        height: 115px;
+        width: 35%;
+        height: 120px;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
     }
@@ -602,6 +602,53 @@ font-size: 1.1rem;
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activities-cards .card-activities {
+        margin-top: 33px;
+        margin-bottom: 25px;
+        width: calc(100% - 20px); /* 100% - espacement (20px) entre les blocs */
+        height: calc(100% - 70px);
+    }
+    
+    .activities-cards img {
+        width: 100%;
+        height: 150px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .activities-cards .card-activities .card-title { /*Ajustement des paramètres*/
+        display: flex;
+        justify-content: center; 
+        align-items: center; /* Centrer verticalement */
+        text-align: center; /* Position centré du texte horizontalement */
+        margin: 10px 25px 10px 0; /* espace supplémentaire autour du texte */
+        padding: 5px 5px 15px 5px; /* espace supplémentaire à l'intérieur de l'élément */
+    }
+
+    /* Footer */
+.footer {
+    background: white;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .footer-list {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+  }
+
+  .footer-content-assistance { /*pour décaler vers la gauche seulement Assistance*/
+    margin-right: 15%;
+}
+
+
 }
 
 /* Small devices (phones, less than 768px) */ /*mediaquery = selon la largeur de l'écran on charge une différente règle css*/
