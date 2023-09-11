@@ -657,8 +657,14 @@ font-size: 1.1rem;
     .main-container {
         width: 100%;
         max-width: 1024px;
-        padding: 0 60px;
+        padding: 0;
         box-sizing: border-box;
+    }
+
+    .accroche{
+        padding-left: 3rem;
+        padding-bottom: 1.5rem;
+        padding-top: 2rem;
     }
 
 
@@ -678,7 +684,7 @@ font-size: 1.1rem;
     }
     
     
-    nav a.active { 
+    nav a:hover { 
         color: #0065FC; /* Texte en bleu */
         border-top-color: transparent; /* Bordure supérieure en bleu */
         border-bottom-color: #0065FC;
@@ -688,12 +694,14 @@ font-size: 1.1rem;
 
     
     nav a {
-        margin:0; /* CORRECTION on ENLEVE LA MARGIN POUR AVOIR LIGNE CONTINUE pour hébergement et activités*/
+        margin-left:0; /* CORRECTION on ENLEVE LA MARGIN POUR AVOIR LIGNE CONTINUE pour hébergement et activités*/
+        padding-left: 0;
         padding-top: 1rem; /*CORRECTION LARGEUR DE LA BARRE BLEUE AVEC TEXTE*/
         border-top: 3px solid transparent; /*ça évite de faire bouger mon logo*/
     }
     
     .subnav{
+        display: flex;
         flex-basis: 100%; /*équivaut à width 100%*/
     }
 
@@ -702,6 +710,8 @@ font-size: 1.1rem;
        justify-content: center;
        text-align: center; /*centrer le texte*/
        border-bottom: 3px solid #F2F2F2;
+       padding-bottom: 1rem;
+       margin: 0; /*Enlève la marge pour avoir cette ligne continue en dessous de hébergements et activités */
     }
 
     .search-form .search-text{
