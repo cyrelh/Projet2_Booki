@@ -879,6 +879,13 @@ font-size: 1.1rem;
         padding: 0;
     }
 
+    .section-title3 {
+        margin-top: 2rem;
+        margin-bottom: 40px;
+        padding-left: 30px;
+        font-size: 22px;
+    }
+
     .activities-cards{
         padding: 0 2rem 0 2rem;
     }
@@ -889,16 +896,15 @@ font-size: 1.1rem;
 
 
     .activities-cards .card-activities {
-        margin-top: 33px;
-        margin-bottom: 25px;
+        margin-top: 0px;
+        margin-bottom: 0;
         width: calc(100% - 20px); /* 100% - espacement (20px) entre les blocs */
-        height: calc(100% - 70px);
+        height: calc(100% - 0px);
     }
     
     .activities-cards img {
         object-fit: cover;
     }
-
 
     .activities-cards .card-activities .card-title { /*Ajustement des paramètres*/
         display: flex;
