@@ -868,10 +868,45 @@ font-size: 1.1rem;
       width: 100%;
     }
 
+    .hebergements-list img{
+        object-fit: cover;
+        height: 125px;
+    }
+
     .hebergements-list .card-subtitle{
         font-size: small;
         margin-bottom: 0.3rem;
         padding: 0;
+    }
+
+    .activities-cards{
+        padding: 0 2rem 0 2rem;
+    }
+
+    .activities-cards a{
+        margin: 0;
+    }
+
+
+    .activities-cards .card-activities {
+        margin-top: 33px;
+        margin-bottom: 25px;
+        width: calc(100% - 20px); /* 100% - espacement (20px) entre les blocs */
+        height: calc(100% - 70px);
+    }
+    
+    .activities-cards img {
+        object-fit: cover;
+    }
+
+
+    .activities-cards .card-activities .card-title { /*Ajustement des paramètres*/
+        display: flex;
+        justify-content: flex-start; 
+        align-items: center; /* Centrer verticalement */
+        text-align: center; /* Position centré du texte horizontalement */
+        margin: 10px 25px 10px 10px; /* espace supplémentaire autour du texte */
+        padding: 5px 5px 15px 5px; /* espace supplémentaire à l'intérieur de l'élément */
     }
 
     footer{
