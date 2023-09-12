@@ -848,16 +848,13 @@ font-size: 1.1rem;
     
     .populaires-cards .card-subtitle {
         margin: 0;
+        padding: 0;
     }
     
     .populaires-cards .card-rating {
         margin-bottom: 5px;
     }
-
-
-
-
-  
+ 
     .hebergements-list,
     .populaires-cards,
     .activities-cards {
@@ -871,8 +868,11 @@ font-size: 1.1rem;
       width: 100%;
     }
 
-
-
+    .hebergements-list .card-subtitle{
+        font-size: small;
+        margin-bottom: 0.3rem;
+        padding: 0;
+    }
 
     footer{
         flex-direction: column;
