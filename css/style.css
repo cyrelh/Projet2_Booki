@@ -656,22 +656,25 @@ font-size: 1.1rem;
   
     .main-container {
         width: 100%;
-        max-width: 1024px;
         padding: 0;
-        box-sizing: border-box;
     }
 
     .accroche{
-        padding-left: 3rem;
-        padding-bottom: 1.5rem;
-        padding-top: 2rem;
+        padding:0;
+    }
+
+    .accroche h1{
+        padding: 2rem 2rem 0 2rem;
+    }
+    
+    .accroche p{
+        padding: 0 0 0 2rem;
     }
 
 
     #logo{
         margin-left: auto;
-        block-size: 1.3rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-bottom: 1rem;
     }
 
@@ -714,13 +717,18 @@ font-size: 1.1rem;
        margin: 0; /*Enlève la marge pour avoir cette ligne continue en dessous de hébergements et activités */
     }
 
+    .search-form{
+        padding: 0 0 0 2rem ;
+
+    }
+
     .search-form .search-text{
         display: none; /*Fait disparâitre le bouton Rechercher*/
     }
 
     .search-form input{
         padding-left: 0; /*bien ferrer à gauche marseille*/
-        padding-right: 2.5rem; /*espacement barre de texte Marseille*/
+        padding-right: 5rem; /*espacement barre de texte Marseille*/
     }
 
     .search-glass{
@@ -740,28 +748,53 @@ font-size: 1.1rem;
         color: #F2F2F2;
         border-color: #0065FC;
     }
-    
+
+    .filter{
+        padding: 1rem 0 0 2rem; 
+        display: flex; /* Pour aligner Filtres avec les 4 autres blocs */
+        align-items: baseline; /*Pour centrer le texte sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
+        gap: 1rem; /*CORRECTION mettre un espace entre chacun des 4 blocs*/
+        flex-wrap: wrap;
+    }
+
+    .subfilter{
+        padding: 1rem;
+        border: 2px solid #F2F2F2;
+        border-radius: 2rem;
+        align-items: center;  
+    }
+
     .subfilter-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-gap: 1.5rem;
+    }
+
+    .subfilter span{
+        padding-left:0.5rem;
     }
 
     .info{
         padding: 1.5rem 0 1.5rem 0;
     }
 
+    .info p{
+        padding: 0;
+    }
 
+
+    .hebergements-and-populaires section {
+        background-color: var(--main-bg-color);
+        border-radius: 0px; /*ENLEVE L'ARRONDI*/
+        padding: 30px;
+        box-sizing: border-box;
+    }
 
     /******* Populaires ***********/
+        
     .populaires {
         order: -1; /*AVANT HEBERGEMENTS*/
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        flex-basis: 100%;
-        
+        margin: 0 0 2rem 0;
     }
     
     .populaires-title {
