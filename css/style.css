@@ -915,20 +915,28 @@ font-size: 1.1rem;
         padding: 5px 5px 15px 5px; /* espace supplémentaire à l'intérieur de l'élément */
     }
 
-    footer{
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        width: 100%;
-    }
-    footer > *{
+    .footer{
+        background: white;
+        display: flex;
         flex-basis: 100%;
-        margin-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 0 0 0;
     }
 
-    .footer-content{
-        font-size: smaller;
-    }
+  .footer-list {
+    display: grid;
+    grid-template-row: repeat(3, 1fr); /* Création de 3 colonnes égales */
+    grid-gap: 20px; /* Ajout d'un espacement entre les éléments */
+  }
+
+  .footer-content-assistance { /*pour décaler vers la gauche seulement Assistance*/
+    margin-right: 15%;
+}
+
+.footer-link{
+    font-size: medium;
+}
 
   }
   
