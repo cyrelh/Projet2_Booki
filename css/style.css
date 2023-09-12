@@ -804,7 +804,7 @@ font-size: 1.1rem;
     }
     
     .section-title {
-        margin: 0;
+        margin: 0 0 1rem 0;
         font-size: 22px;
     }
 
@@ -814,10 +814,15 @@ font-size: 1.1rem;
         grid-gap: 10px; /* Ajout d'un espacement entre les éléments */
         margin-top: 3px; /* Gardez la marge supérieure */
     }
+
+    .populaires-cards a{
+        display: flex;
+        width: 100%;
+    }
     
     .populaires-cards .card {
         display: flex;
-        margin-top: 33px;
+        margin-top: 0;
     }
     
     .populaires-cards img {
