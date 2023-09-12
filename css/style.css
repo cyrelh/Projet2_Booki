@@ -783,12 +783,9 @@ font-size: 1.1rem;
     }
 
 
-    .hebergements-and-populaires section {
-        background-color: var(--main-bg-color);
-        border-radius: 0px; /*ENLEVE L'ARRONDI*/
-        padding: 30px;
-        box-sizing: border-box;
-    }
+    .hebergements-and-populaires .hebergements {
+          background-color: white; /*ARRIERE PLAN EN BLANC FINALLY WORKS*/
+        }
 
     /******* Populaires ***********/
         
@@ -926,7 +923,7 @@ font-size: 1.1rem;
 
   .footer-list {
     display: grid;
-    grid-template-row: repeat(3, 1fr); /* Création de 3 colonnes égales */
+    grid-template-row: repeat(3, 1fr); /* Création de 3 lignes égales */
     grid-gap: 20px; /* Ajout d'un espacement entre les éléments */
   }
 
