@@ -416,47 +416,44 @@ font-size: 1.1rem;
 }
 
 /* Footer */
-.footer {
+footer {
   background: #F2F2F2;
   display: flex;
   flex-basis: 100%;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.footer-list {
+/* .footer-list {
   display: flex;
   justify-content: space-between;
   flex-basis: 100%;
-  max-width: 1440px; /*SIZE du DESKTOP*/
-}
+} */
 
-.footer-content {
+footer div {
   padding-left: 2rem; /*ajout d'un espace du bord gauche*/
   display: flex;
   flex-direction: column;
+  width:33%;
+
 }
 
-.footer-content > *{
+footer div > *{
     margin-bottom: 0.8rem; /*marge entre les link*/
 }
 
-.footer-title {
+footer h3 {
     margin-bottom: 1rem; /*marge entre h3 et le link en dessous*/
 }
 
-.footer-link{
+footer a {
     font-size: smaller; /*police des link plus petite que h3*/
 }
 
-.footer-link:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
+footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
     cursor: pointer;
     text-decoration-line: underline;
 }
 
-.footer-content-assistance { /*pour décaler vers la gauche seulement Assistance*/
-    margin-right: 20%;
-}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
