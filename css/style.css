@@ -613,8 +613,8 @@ footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
         justify-content: center; 
         align-items: center; /* Centrer verticalement */
         text-align: center; /* Position centré du texte horizontalement */
-        margin: 10px 25px 10px 0; /* espace supplémentaire autour du texte */
-        padding: 5px 5px 15px 5px; /* espace supplémentaire à l'intérieur de l'élément */
+        margin: 10px; /* espace supplémentaire autour du texte */
+        padding: 10px; /* espace supplémentaire à l'intérieur de l'élément */
     }
 
 
