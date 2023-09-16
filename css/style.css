@@ -423,12 +423,6 @@ footer {
   justify-content: space-between;
 }
 
-/* .footer-list {
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 100%;
-} */
-
 footer div {
   padding-left: 2rem; /*ajout d'un espace du bord gauche*/
   display: flex;
@@ -623,27 +617,40 @@ footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
         padding: 5px 5px 15px 5px; /* espace supplémentaire à l'intérieur de l'élément */
     }
 
-    /* Footer */
-.footer {
-    background: white;
-    display: flex;
-    flex-basis: 100%;
-    justify-content: center;
-    align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  
-  .footer-list {
+
+/* Footer */
+footer {
+    background: #F2F2F2;
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
-    background-color: #F2F2F2;
+  }
+  
+  footer div {
+    padding-left: 2rem; /*ajout d'un espace du bord gauche*/
+    display: flex;
+    flex-direction: column;
+    width:33%;
+  
+  }
+  
+  footer div > *{
+      margin-bottom: 0.8rem; /*marge entre les link*/
+  }
+  
+  footer h3 {
+      margin-bottom: 1rem; /*marge entre h3 et le link en dessous*/
+  }
+  
+  footer a {
+      font-size: smaller; /*police des link plus petite que h3*/
+  }
+  
+  footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
+      cursor: pointer;
+      text-decoration-line: underline;
   }
 
-  .footer-content-assistance { /*pour décaler vers la gauche seulement Assistance*/
-    margin-right: 15%;
-}
 
 
 }
@@ -881,7 +888,7 @@ footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
     }
 
     .activities-cards{
-        padding: 0 2rem 0 2rem;
+        padding: 0 2rem 4rem 2rem;
     }
 
     .activities-cards a{
@@ -909,28 +916,37 @@ footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
         padding: 5px 5px 15px 5px; /* espace supplémentaire à l'intérieur de l'élément */
     }
 
-    .footer{
-        background: white;
-        display: flex;
-        flex-basis: 100%;
-        justify-content: center;
-        align-items: center;
-        padding: 3rem 0 0 0;
-    }
 
-  .footer-list {
+/* Footer */
+footer {
+    background: #F2F2F2;
     display: grid;
-    grid-template-row: repeat(3, 1fr); /* Création de 3 lignes égales */
-    grid-gap: 20px; /* Ajout d'un espacement entre les éléments */
+    grid-template-columns: repeat(1 1fr);
   }
-
-  .footer-content-assistance { /*pour décaler vers la gauche seulement Assistance*/
-    margin-right: 15%;
-}
-
-.footer-link{
-    font-size: medium;
-}
+  
+  footer div {
+    padding-left: 2rem; /*ajout d'un espace du bord gauche*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  footer div > *{
+      margin-bottom: 0.8rem; /*marge entre les link*/
+  }
+  
+  footer h3 {
+      margin-bottom: 1rem; /*marge entre h3 et le link en dessous*/
+  }
+  
+  footer a {
+      font-size: smaller; /*police des link plus petite que h3*/
+  }
+  
+  footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
+      cursor: pointer;
+      text-decoration-line: underline;
+  }
 
   }
   
