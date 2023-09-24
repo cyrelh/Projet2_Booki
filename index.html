@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booki</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"  
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/7c1c692ab9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
+        crossorigin="anonymous" referrerpolicy="no-referrer" />  <!-- Importation Raileway -->
+    <script src="https://kit.fontawesome.com/7c1c692ab9.js" crossorigin="anonymous"></script> <!-- kit importé du font awesome-->
+    <link rel="stylesheet" href="./css/style.css"> <!-- Fait appel mon CSS file-->
+
 </head>
 
 <body>
@@ -19,14 +20,11 @@
     <nav>
         <img id="logo" src="./images/logo/Booki.png" alt="Logo de Booki">
         <div class="subnav">
-            <a href="#section-hebergements">Hébergements</a>
-            <a href="#section-activites">Activités</a>
+            <a href="#hebergements-title">Hébergements</a>
+            <a href="#activities-title">Activités</a>
         </div>
     </nav>
 </header>
-
-
-
 
 <!-- Phrase d'accroche -->
         <main class="accroche">
@@ -35,32 +33,32 @@
         
 <!-- FORMULAIRE DE RECHERCHE -->
         <div class="search-form">
-            <i class="fas fa-map-marker-alt"></i> <!-- icone -->
+            <i class="fas fa-map-marker-alt"></i> <!-- icone importé du font awesome-->
             <input type="text" placeholder="Marseille, France"> <!-- input -->
             <button class="search-text">Rechercher</button>    <!-- Je veux un bouton -->
-            <div class="search-glass">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="search-glass"> <!-- icone importé du font awesome en responsive mobile-->
+            <i class="fa-solid fa-magnifying-glass"></i> <!-- icone importé du font awesome-->
             </div>
         </div>
 
 <!-- FILTRES DE RECHERCHE -->
-<div class="filter">
-    <h3>Filtres</h3>
-    <div class="subfilter-list">
+<div class="filter"> <!-- Filtres-->
+    <h3>Filtres</h3> 
+    <div class="subfilter-list"> <!-- Liste des 4 sous-filtres-->
         <div class="subfilter">
-            <i class="fa-solid fa-money-bill-wave"></i>
+            <i class="fa-solid fa-money-bill-wave"></i> <!-- icone importé du font awesome-->
             <span>Economique</span>
         </div>
         <div class="subfilter">
-            <i class="fa-solid fa-person"></i>
+            <i class="fa-solid fa-person"></i> <!-- icone importé du font awesome-->
             <span>Familial</span>
         </div>
         <div class="subfilter">
-            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart"></i> <!-- icone importé du font awesome-->
             <span>Romantique</span>
         </div>
         <div class="subfilter">
-            <i class="fa-solid fa-fire"></i>
+            <i class="fa-solid fa-fire"></i> <!-- icone importé du font awesome-->
             <span>Nos Pépites</span>
         </div>
     </div>
@@ -68,7 +66,7 @@
 
 <!-- Message d'info -->
 <div class="info">
-    <i class="fa-solid fa-info"></i>
+    <i class="fa-solid fa-info"></i> <!-- icone importé du font awesome-->
     <p>Plus de 500 logements sont disponibles dans cette ville</p>
 </div>
 
@@ -79,21 +77,21 @@
 
     <!-- Hebergements -->
 
-            <section class="hebergements">
-                    <div class="hebergements-title">
+            <section class="hebergements"> <!-- SECTION HERBERGEMENTS A MARSEILLE-->
+                    <div id="hebergements-title">
                         <h2 class="section-title2">Hébergements à Marseille</h2>
                         </div>
-                <div class="hebergements-list">
-                        <a href="#">
-                        <article class="card">
-                            <img src="./images/hebergements/fred-kleber.jpg" alt="Image avec deux lits de la chambre de l'hôtel du port">
-                            <div class="card-content">
+                <div class="hebergements-list"> <!-- Liste des hébergements-->
+                        <a href="#"> <!-- lien URL pointant sur l'artciel card-->
+                        <article class="card"> <!-- 1er article-->
+                            <img src="./images/hebergements/fred-kleber.jpg" alt="Image avec deux lits de la chambre de l'hôtel du port"> <!-- Image sa source, chemin et sa description-->
+                            <div class="card-content"> <!-- Contenu en dessous de l'image-->
                                 <div class="card-txt">
-                                <h3 class="card-title">Hôtel du port</h3>
-                                <p class="card-subtitle">Nuit à partir de 52 <span class="euro">€</span></p>
+                                <h3 class="card-title">Hôtel du port</h3> <!-- titre-->
+                                <p class="card-subtitle">Nuit à partir de 52 <span class="euro">€</span></p> <!-- info supplémentaire-->
                                 </div>
                             </div>
-                            <div class="card-rating">
+                            <div class="card-rating"> <!-- les étoiles récupérées du bloc les populaires-->
                                     <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                     <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                     <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -104,7 +102,7 @@
                         </article>
                     </a>
                     <a href="#">                       
-                        <article class="card">
+                        <article class="card"> <!-- 2e article-->
                             <img src="./images/hebergements/febrian-zakaria.jpg" alt="Image avec un lit et un bureau de la chambre de l'hôtel chez amina">
                             <div class="card-content">
                                 <div class="card-txt">
@@ -123,7 +121,7 @@
                         </article>
                     </a>
                     <a href="#">                       
-                        <article class="card">
+                        <article class="card"> <!-- 3e article-->
                             <img src="./images/hebergements/reisetopia.jpg" alt="Image avec un lit et un miroir de la chambre de l'hôtel les mouettes">
                             <div class="card-content">
                                 <div class="card-txt">
@@ -142,7 +140,7 @@
                         </article>
                     </a> 
                     <a href="#">                       
-                        <article class="card">
+                        <article class="card"> <!-- 4e article-->
                             <img src="./images/hebergements/annie-spratt.jpg" alt="Image avec un tableau au-dessus d'un lit de la chambre de l'hôtel de la mer">
                             <div class="card-content">
                                 <div class="card-txt">
@@ -161,7 +159,7 @@
                         </article>
                     </a>
                     <a href="#">                       
-                    <article class="card">
+                    <article class="card"> <!-- 5e article-->
                         <img src="./images/hebergements/marcus-loke.jpg" alt="Image avec un lit superposé de la chambre de l'auberge de la mer">
                         <div class="card-content">
                             <div class="card-txt">
@@ -180,7 +178,7 @@
                     </article>
                     </a> 
                     <a href="#">                       
-                        <article class="card">
+                        <article class="card"> <!-- 6e article-->
                             <img src="./images/hebergements/nicate-lee.jpg" alt="Image avec plusieurs lits superposés de la chambre de l'auberge Le Panier">
                             <div class="card-content">
                                 <div class="card-txt">
@@ -198,7 +196,7 @@
                             </div>                   
                         </article>
                         </a> 
-                 <h3><a href="">Afficher plus</a></h3>
+                 <h3><a href="">Afficher plus</a></h3> <!-- Message sous forme de lien URL-->
                 </div>
 
                  
@@ -206,12 +204,12 @@
 
 <!-- Populaires -->
 
-                <section class="populaires">
+                <section class="populaires"> <!-- SECTION LES POPULAIRES-->
                     <div class="populaires-title">
                         <h2 class="section-title">Les plus populaires</h2>
                         <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                     </div>
-                    <div class="populaires-cards">
+                    <div class="populaires-cards"> <!-- Liste des plus populaires-->
                         <a href="#">
                             <article class="card">
                                 <img src="./images/hebergements/emile-guillemot.jpg" alt="Image de la chambre d'hôtel montrant un lit">
@@ -275,8 +273,8 @@
         </section>
 
 
-    <section class="activities">
-                    <div class="activities-title">
+    <section class="activities"> <!-- SECTION ACTIVITES DE MARSEILLE-->
+                    <div id="activities-title">
                         <h2 class="section-title3">Activités à Marseille</h2>
                     </div>
                 <div class="activities-cards">
@@ -285,7 +283,7 @@
                             <img src="./images/activites/reno-laithienne.jpg" alt="Image de bateaux dans un port">
                             <div class="card-content">
                                 <div class="card-txt">
-                                <h3 class="card-title">Vieux-port</h3>
+                                <h3 class="card-title">Vieux-port</h3> <!-- UNIQUEMENT UN TITRE POUR LES INFOS-->
                                 </div>
                             </div>
                         </article>
@@ -324,7 +322,7 @@
                 </div>
          </section>
         </main>
-        <footer>
+        <footer> <!-- PARTIE FOOTER-->
                 <div>
                     <h3>À propos</h3>
                     <a >Fonctionnement du site</a>

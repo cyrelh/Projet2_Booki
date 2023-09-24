@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap'); /* Importation Raileway */
 
 /****** General ***********/
 /*WILDCARD*/
 * {
-    box-sizing: border-box; /*Quand je dis qu'une box fait 200px, elle fera 200px point barre*/
-    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box; /*Quand je dis qu'une box fait X px, elle fera Xpx point final*/
+    font-family: 'Raleway', sans-serif; /* Fait appel à la police Raileway */
 }
 
-:root {
-    --main-color: #0065FC;
+:root { 
+    --main-color: #0065FC; /* Couleurs fournies avec le code source */
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
- 
 }
 
 .fa-solid {
@@ -19,21 +18,21 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    margin: 0; /* CORRECTION effectuée */
+    display: flex; /*Appel au modèle flexbox*/
+    justify-content: center; /*centre horizontalement le contenu de la page, utile pour créer un agencement centré du contenu de la page*/
+    margin: 0; /* CORRECTION effectuée - supprime la marge extérieure par défaut du body*/
 }
 
 .main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
+    width: 100%; /*le conteneur occupera toute la largeur disponible de son parent.*/
+    max-width: 1440px; /*la largeur de l'écran n'ira pas au-delà de cette limite.*/
+    padding: 0 50px; /*pas de marge intérieure en haut et en bas du conteneur*/
+    box-sizing: border-box; /*la largeur déclarée de l'élément de 100%, y compris le padding 50px, est incluse dans la largeur totale de l'élément*/
 }
 
 a {
     color: inherit;
-    text-decoration: none; /* enlève souligne */
+    text-decoration: none; /* enlève soulignage des links */
 }
 
 /* NAVBAR */
@@ -46,13 +45,13 @@ nav{
 }
 
 .subnav{
-    display: flex; /* Hebergement et activités se sont des liens (n'ont pas de hauteur) et à donc sont en display inline, donc on passe à un display flex*/
+    display: flex; /* Hebergement et activités se sont des liens (n'ont pas de hauteur) d'origine sont en display inline, donc on passe à un display flex*/
 }
 
 .subnav a {
     margin:0 1rem 1rem 3rem; /* CORRECTION on rajoute de la marge interne pour hébergement et activités*/
     padding-top: 1rem; /*CORRECTION LARGEUR DE LA BARRE BLEUE AVEC TEXTE*/
-    border-top: 3px solid transparent; /*ça évite de faire bouger mon logo*/
+    border-top: 3px solid transparent; /*ça évite de faire bouger mon logo et bordure haut sans survol souris reste transparent*/
 
 }
 
@@ -108,12 +107,12 @@ font-size: 1.1rem;
     border: 0.2rem solid transparent; /*TRANSPARENT SINON GROSSE SURPRISE COTE MOBILE Maitrise hauteur bordure*/
 }
 .search-form input{
-   flex-basis: 12rem; /*largeur du input Marseille France */
+   flex-basis: 12rem; /*définit la base de flexibilité (ou la largeur de base) - largeur du input Marseille France */
    border: 0.1rem solid #F2F2F2;
 }
 .search-form input::placeholder{
     font-weight: bold;
-    text-align: center; /* Revoir  plus tard <<<<<<<<<<<< */
+    text-align: center; /* texte centré */
     color: #000;
     
 }
@@ -122,17 +121,17 @@ font-size: 1.1rem;
     background-color: #0065FC;
     border-radius: 0 1rem 1rem 0;
     border: 0.1rem solid #0065FC;
-    padding: 1rem; /*Correction ESPACE SUR LES COTES BOUTTON RECHERCHER*/
+    padding: 1rem; /*Correction ESPACE SUR LES COTES BOUTON RECHERCHER*/
     color: #F2F2F2;
     font-weight: bold;
-    cursor:pointer; /*negligeable*/
-    opacity: 0.9; /*negligeable*/
-    transition: transform 400ms; /*negligeable*/
+    cursor:pointer; /*negligeable - main au survol*/
+    opacity: 0.9; /*negligeable - légèrement transparent*/
+    transition: transform 400ms; /*negligeable - changement dans la transformation de l'élément*/
 }
 
 .search-form button:hover{ /*negligeable*/
     opacity: 1;
-    transform: scale(1.03);
+    transform: scale(1.03); /*agrandit l'élément de 3 % par rapport à sa taille d'origine.*/
 
 }
 
@@ -140,9 +139,9 @@ font-size: 1.1rem;
 .filter{
     padding: 2rem 0 0 0; /*Correction effectuée*/
     display: flex; /* Pour aligner Filtres avec les 4 autres blocs */
-    align-items: baseline; /*Pour centrer le texte sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
+    align-items: baseline; /*aligner le texte des éléments enfants en fonction de leur texte plutôt que de leur hauteur totale.*/
     gap: 1rem; /*CORRECTION mettre un espace entre chacun des 4 blocs*/
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* autorisés à passer à la ligne suivante si l'espace horizontal  disponible n'est pas suffisant pour tous les contenir sur une seule ligne*/
 }
 
 .subfilter-list{
@@ -153,8 +152,8 @@ font-size: 1.1rem;
 .subfilter{
     padding: 1rem;
     border: 2px solid #F2F2F2;
-    border-radius: 2rem;
-    align-items: center;  
+    border-radius: 2rem; /*arrondi les bords*/
+    align-items: center;  /*les éléments à l'intérieur de cet élément seront alignés verticalement au centre*/
 }
 
 .subfilter .fa-solid{
@@ -184,8 +183,8 @@ font-size: 1.1rem;
     border: 1px solid #F2F2F2;
     border-radius: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* aligner le contenu de l'élément au centre, tant verticalement qu'horizontalement.*/
+    justify-content: center; /* aligner le contenu de l'élément au centre, tant verticalement qu'horizontalement --> S'assure que tout contenu à l'intérieur de cet élément est centré dans le cercle..*/
 
 }
 
@@ -222,6 +221,7 @@ font-size: 1.1rem;
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    
 }
 
 .card-activities{
@@ -247,7 +247,7 @@ font-size: 1.1rem;
     margin-bottom: 0;
 }
 
-.hebergements-title {
+#hebergements-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -260,7 +260,7 @@ font-size: 1.1rem;
 
 .hebergements-list{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes égales */
+    grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes égales et chaque colonne occupe une fraction égale de l'espace disponible  */
     grid-gap: 20px; /* Ajout d'un espacement entre les éléments */
     margin-top: 33px; /* Gardez la marge supérieure */
 }
@@ -268,8 +268,16 @@ font-size: 1.1rem;
 .hebergements-list .card{ /*PAS DE FLEX*/
     width: 100%; /* Chaque élément occupera 100% de la largeur de sa cellule */
     margin-bottom: 0; /* Augmentez ou diminuez cette valeur selon votre préférence */
+    cursor:pointer; /*negligeable - main au survol*/
+    opacity: 0.9; /*negligeable - légèrement transparent*/
+    transition: transform 400ms; /*negligeable - changement dans la transformation de l'élément*/
+    }
 
+    .hebergements-list .card:hover { /*negligeable*/
+    opacity: 1;
+    transform: scale(1.03); /*agrandit l'élément de 3 % par rapport à sa taille d'origine.*/
 }
+
 
 .hebergements-list img{ 
     width: 100%;
@@ -277,6 +285,8 @@ font-size: 1.1rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+
 
 .hebergements-list .card-content{ /*le conteneur de chaque card*/
     width: 100%;
@@ -330,7 +340,17 @@ font-size: 1.1rem;
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+    cursor:pointer; /*negligeable - main au survol*/
+    opacity: 0.9; /*negligeable - légèrement transparent*/
+    transition: transform 400ms; /*negligeable - changement dans la transformation de l'élément*/
 }
+
+.populaires-cards .card:hover { /*negligeable*/
+opacity: 1;
+transform: scale(1.03); /*agrandit l'élément de 3 % par rapport à sa taille d'origine.*/
+}
+
+
 
 .populaires-cards img {
     width: 33%;
@@ -369,7 +389,7 @@ font-size: 1.1rem;
     margin-bottom: 0;
 }
 
-.activities-title {
+#activities-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -386,13 +406,22 @@ font-size: 1.1rem;
     padding-left: 30px;
     justify-content: space-between;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Création de 4 colonnes égales */
+    grid-template-columns: repeat(4, 1fr); /* Création de 4 colonnes égales et chaque colonne occupe une fraction égale de l'espace disponible  */
     grid-gap: 1px; /* Ajout d'un espacement entre les éléments */
 }
 
 .activities-cards .card-activities {
     margin-top: 33px;
-    width: calc(100% - 20px); /* 100% - espacement (20px) entre les blocs */}
+    width: calc(100% - 20px); /* 100% - espacement (20px) entre les blocs */
+    cursor:pointer; /*negligeable - main au survol*/
+    opacity: 0.9; /*negligeable - légèrement transparent*/
+    transition: transform 400ms; /*negligeable - changement dans la transformation de l'élément*/
+}
+
+.activities-cards .card-activities:hover { /*negligeable*/
+opacity: 1;
+transform: scale(1.03); /*agrandit l'élément de 3 % par rapport à sa taille d'origine.*/
+}
 
 .activities-cards img {
     width: 100%;
@@ -545,7 +574,7 @@ footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
 
     .hebergements-list{
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes égales */
+        grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes égales et chaque colonne occupe une fraction égale de l'espace disponible */
         grid-gap: 24px; /* Ajout d'un espacement entre les éléments */
         margin-top: 27px; /* Gardez la marge supérieure */
     }
@@ -598,23 +627,26 @@ footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
         margin-bottom: 25px;
         width: calc(100% - 20px); /* 100% - espacement (20px) entre les blocs */
         height: calc(100% - 70px);
+        text-align: left;
     }
     
     .activities-cards img {
-        width: 100%;
-        height: 150px;
+        object-fit: cover;
+        height: 200px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
 
     .activities-cards .card-activities .card-title { /*Ajustement des paramètres*/
         display: flex;
-        justify-content: center; 
-        align-items: center; /* Centrer verticalement */
-        text-align: center; /* Position centré du texte horizontalement */
-        margin: 10px; /* espace supplémentaire autour du texte */
-        padding: 10px; /* espace supplémentaire à l'intérieur de l'élément */
+        justify-content: left; 
+        text-align: left; /* Position centré du texte horizontalement */
+        padding: 0 0 0.5rem 0; /* espace supplémentaire à l'intérieur de l'élément */
+        margin: 1rem;
     }
+
+
+
 
 
 /* Footer */
