@@ -758,7 +758,7 @@ footer {
     }
 
     .search-form .search-text{
-        display: none; /*Fait disparâitre le bouton Rechercher*/
+        display: none; /*Fait disparaître le bouton Rechercher*/
     }
 
     .search-form input{
@@ -771,9 +771,8 @@ footer {
         background-color: #0065FC;
         border-radius: 25%;
         box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5); /* Ombre en bas */
-    
     }
-
+    
     .search-glass i{
         background-color: #0065FC;
     }
