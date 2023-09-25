@@ -543,7 +543,7 @@ footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
     }
     .search-form input::placeholder{
         font-weight: bold;
-        text-align: center; /* Revoir  plus tard <<<<<<<<<<<< */
+        text-align: center; 
         color: #000;
         
     }
@@ -567,11 +567,11 @@ footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
     }
 
     .hebergements-and-populaires {
-        flex-direction: column;
+        flex-direction: column; /*OBJECT DE LA DEMARCHE EN TABLETTE*/
     }
 
     .hebergements {
-        width: 100%;
+        width: 100%; /*OBJECT DE LA DEMARCHE EN TABLETTE*/
     }
 
     .hebergements-list{
@@ -590,13 +590,13 @@ footer a:hover { /*POINT DE VIGILANCE Etape 9 :"pour réaliser les liens" */
 
 
     .populaires {
-        width: 100%;
+        width: 100%; /*OBJECT DE LA DEMARCHE EN TABLETTE*/
         margin-top: 50px;
     }
 
     .populaires-cards {
         display: flex;
-        flex-direction: row;
+        flex-direction: row; /*OBJECT DE LA DEMARCHE EN TABLETTE*/
         justify-content: space-between;
     }
 
@@ -693,7 +693,7 @@ footer {
   
     .main-container {
         width: 100%;
-        padding: 0;
+        padding: 0; /*OBJECT DE LA DEMARCHE EN MOBILE*/
     }
 
     .accroche{
@@ -709,7 +709,7 @@ footer {
     }
 
 
-    #logo{
+    #logo{ /*OBJECT DE LA DEMARCHE EN MOBILE*/
         margin-left: auto;
         margin-top: 2rem;
         margin-bottom: 1rem;
@@ -724,7 +724,7 @@ footer {
     }
     
     
-    nav a:hover { 
+    nav a:hover {  /*OBJECT DE LA DEMARCHE EN MOBILE*/
         color: #0065FC; /* Texte en bleu */
         border-top-color: transparent; /* Bordure supérieure en bleu */
         border-bottom-color: #0065FC;
@@ -745,7 +745,7 @@ footer {
         flex-basis: 100%; /*équivaut à width 100%*/
     }
 
-    .subnav a{
+    .subnav a{ /*OBJECT DE LA DEMARCHE EN MOBILE*/
        flex-basis: 50%; /*équivaut mais gagne par rapport à width: 50%; Partage moitié/moitié hébergements activités*/
        justify-content: center;
        text-align: center; /*centrer le texte*/
@@ -759,11 +759,11 @@ footer {
 
     }
 
-    .search-form .search-text{
+    .search-form .search-text{ /*OBJECT DE LA DEMARCHE EN MOBILE*/
         display: none; /*Fait disparaître le bouton Rechercher*/
     }
 
-    .search-form input{
+    .search-form input{ /*OBJECT DE LA DEMARCHE EN MOBILE*/
         padding-left: 0; /*bien ferrer à gauche marseille*/
         padding-right: 5rem; /*espacement barre de texte Marseille*/
     }
@@ -801,7 +801,7 @@ footer {
     }
 
     .subfilter-list {
-    display: grid;
+    display: grid; /*OBJECT DE LA DEMARCHE EN MOBILE*/
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
     }
@@ -819,13 +819,13 @@ footer {
     }
 
 
-    .hebergements-and-populaires .hebergements {
+    .hebergements-and-populaires .hebergements { /*OBJECT DE LA DEMARCHE EN MOBILE*/
           background-color: white; /*ARRIERE PLAN EN BLANC FINALLY WORKS*/
         }
 
     /******* Populaires ***********/
         
-    .populaires {
+    .populaires { /*OBJECT DE LA DEMARCHE EN MOBILE*/
         order: -1; /*AVANT HEBERGEMENTS*/
         margin: 0 0 2rem 0;
     }
@@ -842,7 +842,7 @@ footer {
     }
 
      .populaires-cards{
-        display: grid;
+        display: grid; /*OBJECT DE LA DEMARCHE EN MOBILE*/
         grid-template-rows: repeat(3, 1fr); /* Création de 3 lignes égales */
         grid-gap: 10px; /* Ajout d'un espacement entre les éléments */
         margin-top: 3px; /* Gardez la marge supérieure */
@@ -891,7 +891,7 @@ footer {
     .hebergements-list,
     .populaires-cards,
     .activities-cards {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /*OBJECT DE LA DEMARCHE EN MOBILE*/
       grid-gap: 20px; 
     }
   
@@ -953,13 +953,13 @@ footer {
 footer {
     background: #F2F2F2;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr); /*OBJECT DE LA DEMARCHE EN MOBILE*/
   }
   
   footer div {
     padding-left: 2rem; /*ajout d'un espace du bord gauche*/
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*OBJECT DE LA DEMARCHE EN MOBILE*/
     width: 100%;
   }
   
