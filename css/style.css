@@ -682,9 +682,12 @@ footer a:hover {
 
 /* Small devices (phones, less than 768px) */ /*mediaquery = selon la largeur de l'écran on charge une différente règle css*/
 @media (max-width: 767.98px) {
+    
   .main-container {
-    width: 100%;
+    width: auto;
     padding: 0; /*OBJECT DE LA DEMARCHE EN MOBILE*/
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .accroche {
@@ -692,11 +695,11 @@ footer a:hover {
   }
 
   .accroche h1 {
-    padding: 2rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 1rem;
   }
 
   .accroche p {
-    padding: 0 0 0 2rem;
+    padding: 0 0 0 1rem;
   }
 
   #logo {
@@ -746,7 +749,7 @@ footer a:hover {
   }
 
   .search-form {
-    padding: 0 0 0 2rem;
+    margin-left: 1rem;
   }
 
   .search-form .search-text {
@@ -757,7 +760,7 @@ footer a:hover {
   .search-form input {
     /*OBJECT DE LA DEMARCHE EN MOBILE*/
     padding-left: 0; /*bien ferrer à gauche marseille*/
-    padding-right: 5rem; /*espacement barre de texte Marseille*/
+    padding-right: 3rem; /*espacement barre de texte Marseille*/
   }
 
   .search-glass {
@@ -777,7 +780,7 @@ footer a:hover {
   }
 
   .filter {
-    padding: 1rem 0 0 2rem;
+    padding: 12px;
     display: flex; /* Pour aligner Filtres avec les 4 autres blocs */
     align-items: baseline; /*Pour centrer le texte sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
     gap: 1rem; /*CORRECTION mettre un espace entre chacun des 4 blocs*/
@@ -793,16 +796,17 @@ footer a:hover {
 
   .subfilter-list {
     display: grid; /*OBJECT DE LA DEMARCHE EN MOBILE*/
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr); /*last correction*/
+    grid-gap: 1rem;
   }
 
   .subfilter span {
-    padding-left: 0.5rem;
+    padding-left: 4px; /*last correction*/
   }
 
   .info {
-    padding: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .info p {
@@ -812,6 +816,10 @@ footer a:hover {
   .hebergements-and-populaires .hebergements {
     /*OBJECT DE LA DEMARCHE EN MOBILE*/
     background-color: white; /*ARRIERE PLAN EN BLANC FINALLY WORKS*/
+  }
+
+  .hebergements-and-populaires section { /*Last correction*/ 
+    border-radius: 0;
   }
 
   /******* Populaires ***********/
