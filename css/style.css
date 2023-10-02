@@ -760,7 +760,7 @@ footer a:hover {
   .search-form input {
     /*OBJECT DE LA DEMARCHE EN MOBILE*/
     padding-left: 0; /*bien ferrer à gauche marseille*/
-    padding-right: 3rem; /*espacement barre de texte Marseille*/
+    padding-right: 2rem; /*espacement barre de texte Marseille*/
   }
 
   .search-glass {
@@ -782,26 +782,28 @@ footer a:hover {
   .filter {
     padding: 12px;
     display: flex; /* Pour aligner Filtres avec les 4 autres blocs */
-    align-items: baseline; /*Pour centrer le texte sur l'axe H l'alignement de Filtres avec les 4 autres blocs*/
-    gap: 1rem; /*CORRECTION mettre un espace entre chacun des 4 blocs*/
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .subfilter {
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
     border: 2px solid #f2f2f2;
     border-radius: 2rem;
+    width: calc(50% - 1rem); /* Calcul de la largeur pour que deux filtres tiennent dans une ligne avec un espace de 1rem entre eux */
+    display: flex;
     align-items: center;
   }
 
   .subfilter-list {
-    display: grid; /*OBJECT DE LA DEMARCHE EN MOBILE*/
-    grid-template-columns: repeat(2, 1fr); /*last correction*/
-    grid-gap: 1rem;
+    display: flex; /* Utilisation flex plutôt que grid pour obtenir deux filtres par ligne */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   .subfilter span {
-    padding-left: 4px; /*last correction*/
+    padding: 1rem; /*last correction*/
   }
 
   .info {
